@@ -53,7 +53,57 @@ replace_party = function(p){
 
 ```
 
-# Grafik 1 Karte
+# Abstimmungsverhalten eines jeden Parlamentarier
+
+```{r}
+#| message: false
+
+path_austrian_votes = makePath(here("output/data/austrian_votes_long.csv"))
+data_austrian_votes = read_csv(path_austrian_votes)
+op_austrian_each = makePath(here("analysis/print_quarto/data/share_each_mep_at.csv"))
+
+data_austrian_votes %>% 
+  group_by(last_name) %>% 
+  mutate(n_votes = n(),
+         name = glue("{party}__{last_name} ({n()})")) %>% 
+  group_by(name, position) %>% 
+  summarise(
+    share_position = n() / first(n_votes),
+    .groups = "drop"
+  ) %>% 
+  select(name, position, share_position) %>% 
+    mutate(
+      order = case_when(
+        str_detect(name, "EPP") ~ 1,
+        str_detect(name, "SD") ~ 2,
+        str_detect(name, "ID") ~ 3,
+        str_detect(name, "GREEN") ~ 4,
+        str_detect(name, "RENEW") ~ 5,
+        .default = NA
+      )
+    ) %>% 
+  arrange(order, name) %>% 
+  select(name, position, share_position) %>% 
+  mutate(share_position=100*share_position) %>% 
+  pivot_wider(
+    names_from = position,
+    values_from = share_position
+  ) -> data_each_member
+write_csv(data_each_member, op_austrian_each)
+
+dw_data_to_chart(data_each_member, "V3DT0")  
+
+```
+
+<iframe title="Anteil der Stimmen für jede Position für jede(n) MEP" aria-label="Balken (gestapelt)" id="datawrapper-chart-V3DT0" src="https://datawrapper.dwcdn.net/V3DT0/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="650" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+
+## [Link zum Diagramm](https://www.datawrapper.de/_/V3DT0/?v=2)
+## [Link zu den Daten](data/share_each_mep_at.csv)
+## [Link zum SVG](svg/each_mep_at.svg)
+
+
+#  Karte
 
 ```{r}
 #| message: false
