@@ -1,0 +1,24 @@
+.quarto-title-block{
+  padding: 2rem;
+}
+
+
+body{
+  color: #008080;
+}
+
+.highlight{
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+  background-color: paleturquoise;
+}
+
+h1,h2{
+  margin-block: 1rem;
+}
+
+#quarto-appendix{
+  background-color: red;
+  padding: 2rem;
+}
