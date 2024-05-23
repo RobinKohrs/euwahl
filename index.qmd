@@ -1,6 +1,5 @@
 ---
 title: "SPA EU Wahl - Daten und Grafiken"
-author: "Robin Kohrs"
 bibliography: refs.bib
 csl: german-council-of-economic-experts.csl
 lang: de
