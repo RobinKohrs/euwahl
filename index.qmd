@@ -339,7 +339,7 @@ dw_data_to_chart(data_main_non_main, "Q3VvE")
  Insgesamt gab es in dieser Legislaturperiode (zumindest in den Daten) `r n_total` Abstimmungen. Davon waren `r n_main` (ca. 9,3 %) Resolutionsabstimmnungen. Der Großteil waren Abstimmungen über keine finalen Resolutionen `r n_not_main` (90,7 %)
 </div>
 
-<iframe title="9/10 der Abstimmungen sind keine Resolutionen" aria-label="Torten-diagramm" id="datawrapper-chart-Q3VvE" src="https://datawrapper.dwcdn.net/Q3VvE/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="540" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+<iframe title="9/10 der Abstimmungen sind keine Resolutionen" aria-label="Torten-diagramm" id="datawrapper-chart-Q3VvE" src="https://datawrapper.dwcdn.net/Q3VvE" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="540" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
 ## [Link zum Diagramm](https://www.datawrapper.de/_/Q3VvE/)
@@ -365,7 +365,7 @@ data_share_party_final_res %>%
   dw_data_to_chart(datawrapper_id_party_win)
 
 ```
-<iframe title="Die NEOS stimmen fast immer gleich dem Endergebnis ab" aria-label="Balken" id="datawrapper-chart-B9zR3" src="https://datawrapper.dwcdn.net/B9zR3/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="330" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+<iframe title="Die NEOS stimmen fast immer gleich dem Endergebnis ab" aria-label="Balken" id="datawrapper-chart-B9zR3" src="https://datawrapper.dwcdn.net/B9zR3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="330" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
 ## [Link zum Diagramm](https://www.datawrapper.de/_/B9zR3/?v=3)
